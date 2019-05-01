@@ -1,24 +1,69 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README document steps are necessary to get the application up and running.
 
-Things you may want to cover:
+## Precondition 
+* Ruby version 2.6.0 installed
 
-* Ruby version
+## Web Application Stack
+* Rails 5.2.3
+* Bootstrap 4.0.0
+* Postgress 1.1.4
 
-* System dependencies
+## Description
+This application allows to create and review upcoming events. 
+* Fill out the following form to create a new user
+![](snapshots/sc1.png)
 
-* Configuration
+* Navigate to home page, click on `Создать событие ` and complete the form
+![](snapshots/sc2.png)
 
-* Database creation
+* A new event should be displayed on the home page
+![](snapshots/sc3.png)
 
-* Database initialization
+## Configuration
+Install bundler
+````
+gem install bundler
+```` 
 
-* How to run the test suite
+To get started with the app, clone the repo and then install the needed gems:
+````
+bundle install
+````
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database creation and initialization
+Next, migrate the database:
+````
+bundle exec rails db:migrate
+````
 
-* Deployment instructions
+## Services (job queues, cache servers, search engines, etc.)
+Run the app in a local server:
+````
+bundle exec rails server
+````
 
-* ...
+## Deployment instructions
+Following instructions for Heroku:
+
+* Login to your Heroku account
+````
+heroku login
+````
+* Create Heroku app
+````
+heroku create your_app_name
+````
+* Deploy an application
+````
+git push heroku master
+````
+* Initialize database
+````
+heroku run rails db:migrate
+````
+* The application should be up and running
+
+
+
