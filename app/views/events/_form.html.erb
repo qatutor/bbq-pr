@@ -1,4 +1,4 @@
-<%# Паршиал дляотображения формы создания нового события %>
+<%# Паршиал для отображения формы создания нового события %>
 <%= form_for(@event) do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: @event} %>
 
@@ -8,7 +8,7 @@
       <div class="input-group-addon">
         <span class="glyphicon glyphicon-edit"></span>
       </div>
-      <%= f.text_field :title, class: 'form-control', placeholder: "Введите название", required: true %>
+      <%= f.text_field :title, class: 'form-control', placeholder: t('placeholder.event_name'), required: true %>
     </div>
   </div>
 
@@ -18,7 +18,7 @@
       <div class="input-group-addon">
         <span class="glyphicon glyphicon-map-marker"></span>
       </div>
-      <%= f.text_field :address, class: 'form-control', placeholder: "Введите адрес", required: true %>
+      <%= f.text_field :address, class: 'form-control', placeholder: t('placeholder.address'), required: true %>
     </div>
   </div>
 
@@ -33,7 +33,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Save", class: 'btn btn-primary' %>
-    или <%= link_to "Back", :back %>
+    <%= f.submit t('actions.save'), class: 'btn btn-primary' %>
+    <%= link_to t('actions.back'), :back , class: 'btn btn-primary'%>
   </div>
 <% end %>

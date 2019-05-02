@@ -10,7 +10,7 @@
           <span class="glyphicon glyphicon-envelope"></span>
         </div>
         <%= f.email_field :email, autofocus: true, autocomplete: "email",
-                          class: "form-control is-valid", placeholder: "Введите email", required: true%>
+                          class: "form-control is-valid", placeholder: t('placeholder.email'), required: true%>
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
           <span class="glyphicon glyphicon-lock"></span>
         </div>
         <%= f.password_field :password, autocomplete: "current-password",
-                             class: "form-control", placeholder: "Введите пароль", required: true %>
+                             class: "form-control", placeholder: t('placeholder.password'), required: true %>
       </div>
     </div>
   </div>
@@ -31,12 +31,12 @@
   <% if devise_mapping.rememberable? %>
     <div class="form-check">
       <%= f.check_box :remember_me, class: "form-check-input" %>
-      <%= f.label "Запомнить меня", class: "form-check-label" %>
+      <%= f.label t('actions.remember_me'), class: "form-check-label" %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Войти", class: "btn btn-primary"%>
+    <%= f.submit t('actions.enter'), class: "btn btn-primary"%>
   </div>
 <% end %>
 

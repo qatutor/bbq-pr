@@ -14,3 +14,32 @@ ru:
         address: 'Адрес'
         datetime: 'Дата и время'
         description: 'Описание'
+  controllers:
+    events:
+      created: 'Событие было успешно создано'
+      updated: 'Событие было успешно обновлено'
+      destroyed: 'Событие было успешно удалено'
+    users:
+      updated: 'Пользователь был успешно обновлен'
+  actions:
+    register: 'Зарегистироваться'
+    enter: 'Войти'
+    remember_me: 'Запомнить меня'
+    save: 'Сохранить'
+    back: 'Вернуться'
+    edit: 'Редактировать профиль'
+    show: 'Показать'
+    create_event: 'Создать событие'
+    change: 'Изменить'
+    change_password: 'Сменить пароль'
+  placeholder:
+    email: 'Введите email'
+    name: 'Введите имя'
+    password: 'Введите пароль'
+    password_confirmation: 'Подтвердите пароль'
+    address: 'Введите адрес'
+    event_name: 'Введите название'
+    datetime: 'Дата и время'
+  messages:
+    info:
+      user_no_events: 'Пользователь пока не организовал ни одного события'
