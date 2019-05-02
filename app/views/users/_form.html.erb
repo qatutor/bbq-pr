@@ -2,7 +2,7 @@
   <%= render partial: 'partials/form_errors', locals: {model: @user} %>
 
   <div class="form-group">
-    <%= f.label "Имя" %>
+    <%= f.label :name %>
     <div class="input-group">
       <div class="input-group-addon">
         <span class="glyphicon glyphicon-user"></span>
@@ -24,7 +24,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-    или <%= link_to 'вернуться', :back %>
+    <%= f.submit "Save", class: 'btn btn-primary' %>
+    или <%= link_to "Back", :back %>
   </div>
 <% end %>

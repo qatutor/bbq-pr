@@ -18,7 +18,7 @@
 
   <div class="row">
     <div class="form-group col-sm-6">
-      <%= f.label "Имя" %>
+      <%= f.label :name %>
       <div class="input-group">
         <div class="input-group-addon">
           <span class="glyphicon glyphicon-user"></span>
@@ -30,7 +30,7 @@
 
   <div class="row">
     <div class="form-group col-sm-6">
-      <%= f.label "Пароль" %>
+      <%= f.label :password %>
       <div class="input-group">
         <div class="input-group-addon">
           <span class="glyphicon glyphicon-lock"></span>
@@ -46,7 +46,7 @@
 
   <div class="row">
     <div class="form-group col-sm-6">
-      <%= f.label "Подтверждение пароля" %><br />
+      <%= f.label :password_confirmation %><br />
       <div class="input-group">
         <div class="input-group-addon">
           <span class="glyphicon glyphicon-lock"></span>
@@ -58,7 +58,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Зарегистрироваться", class: "btn btn-primary" %>
+    <%= f.submit "Register", class: "btn btn-primary" %>
   </div>
 <% end %>
 
