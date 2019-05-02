@@ -32,6 +32,10 @@ ru:
     create_event: 'Создать событие'
     change: 'Изменить'
     change_password: 'Сменить пароль'
+    destroy_account: 'Удалить аккаунт'
+    update: 'Обновить'
+    logout: 'Выйти'
+    profile: 'Профиль'
   placeholder:
     email: 'Введите email'
     name: 'Введите имя'
@@ -43,3 +47,9 @@ ru:
   messages:
     info:
       user_no_events: 'Пользователь пока не организовал ни одного события'
+      leave_password_blank: '(оставьте пустым, если не нужно менять)'
+      current_password_required: '(необходим текущий пароль для изменений)'
+      confirmation: 'Вы уверены?'
+  page:
+    header_nav_title: 'Шашлыки'
+
