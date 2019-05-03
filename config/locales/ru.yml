@@ -52,4 +52,7 @@ ru:
       confirmation: 'Вы уверены?'
   page:
     header_nav_title: 'Шашлыки'
-
+  errors_count:
+    one: '%{count} ошибка'
+    few: '%{count} ошибки'
+    many: '%{count} ошибок'

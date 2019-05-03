@@ -9,7 +9,7 @@ gem "twitter-bootstrap-rails"
 gem 'devise'
 gem 'jquery-rails'
 gem 'devise-i18n'
-gem 'russian'
+gem 'rails-i18n', '~> 5.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
