@@ -1,10 +1,9 @@
 <% if resource.errors.any? %>
-  <div id="error_explanation">
-    <div class="mb-5 text-danger">В вашей форме <%= I18n.t :errors_count, count: resource.errors.count %> </div>
-      <ul>
+  <div id="error_explanation" >
+    <div class="text-danger buffer-bottom">В вашей форме <%= I18n.t :errors_count, count: resource.errors.count %> </div>
         <% resource.errors.full_messages.each do |message| %>
-          <div class="row">
-            <div class="alert alert-danger alert-dismissible col-sm-6" role="alert">
+          <div>
+            <div class="alert alert-danger alert-dismissible col-sm-7" role="alert">
               <%= message %>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -12,6 +11,5 @@
             </div>
           </div>
         <% end %>
-      </ul>
   </div>
 <% end %>

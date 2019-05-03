@@ -1,7 +1,6 @@
 <h2>Войти</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
   <div class="row">
     <div class="form-group col-sm-6">
       <%= f.label :email %>
@@ -10,7 +9,7 @@
           <span class="glyphicon glyphicon-envelope"></span>
         </div>
         <%= f.email_field :email, autofocus: true, autocomplete: "email",
-                          class: "form-control is-valid", placeholder: t('placeholder.email'), required: true%>
+                          class: "form-control", placeholder: t('placeholder.email')%>
       </div>
     </div>
   </div>
@@ -23,7 +22,7 @@
           <span class="glyphicon glyphicon-lock"></span>
         </div>
         <%= f.password_field :password, autocomplete: "current-password",
-                             class: "form-control", placeholder: t('placeholder.password'), required: true %>
+                             class: "form-control", placeholder: t('placeholder.password')%>
       </div>
     </div>
   </div>

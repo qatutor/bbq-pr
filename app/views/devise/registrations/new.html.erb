@@ -5,13 +5,12 @@
 
   <div class="row">
     <div class="form-group col-sm-6">
-      <%= f.label :email %><br />
+      <%= f.label :email %>
       <div class="input-group">
         <div class="input-group-addon">
           <span class="glyphicon glyphicon-envelope"></span>
         </div>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email",
-                          class: "form-control is-valid ", placeholder: t('placeholder.email'), required: true%>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: t('placeholder.email')%>
       </div>
     </div>
   </div>
@@ -23,7 +22,7 @@
         <div class="input-group-addon">
           <span class="glyphicon glyphicon-user"></span>
         </div>
-        <%= f.text_field :name, class: 'form-control', placeholder: t('placeholder.name'), required: true %>
+        <%= f.text_field :name, class: 'form-control', placeholder: t('placeholder.name')%>
       </div>
     </div>
   </div>
@@ -36,7 +35,7 @@
           <span class="glyphicon glyphicon-lock"></span>
         </div>
         <%= f.password_field :password, autocomplete: "new-password",
-                             class: "form-control", placeholder: t('placeholder.password'), minlength: 6, required: true %>
+                             class: "form-control", placeholder: t('placeholder.password')%>
       </div>
       <% if @minimum_password_length %>
         <small class="form-text text-muted">(Не менее <%= @minimum_password_length %> символов)</small>
@@ -52,7 +51,7 @@
           <span class="glyphicon glyphicon-lock"></span>
         </div>
         <%= f.password_field :password_confirmation, autocomplete: "new-password",
-                             class: "form-control", placeholder: t('placeholder.password_confirmation'), minlength: 6, required: true %>
+                             class: "form-control", placeholder: t('placeholder.password_confirmation') %>
       </div>
     </div>
   </div>
