@@ -51,8 +51,13 @@ ru:
       current_password_required: '(необходим текущий пароль для изменений)'
       confirmation: 'Вы уверены?'
   page:
-    header_nav_title: 'Шашлыки'
+    app_name: 'Шашлыки'
+    company_name: 'Company VG 2019'
   errors_count:
     one: '%{count} ошибка'
     few: '%{count} ошибки'
     many: '%{count} ошибок'
+  password_count:
+    one: 'Не менее %{count} символ'
+    few: 'Не менее %{count} символа'
+    many: 'Не менее %{count} символов'

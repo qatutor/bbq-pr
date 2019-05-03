@@ -10,7 +10,7 @@
         <div class="input-group-addon">
           <span class="glyphicon glyphicon-envelope"></span>
         </div>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: t('placeholder.email')%>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: t('placeholder.email'), require: true %>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
         <div class="input-group-addon">
           <span class="glyphicon glyphicon-user"></span>
         </div>
-        <%= f.text_field :name, class: 'form-control', placeholder: t('placeholder.name')%>
+        <%= f.text_field :name, class: 'form-control', placeholder: t('placeholder.name'), require: true %>
       </div>
     </div>
   </div>
@@ -35,10 +35,10 @@
           <span class="glyphicon glyphicon-lock"></span>
         </div>
         <%= f.password_field :password, autocomplete: "new-password",
-                             class: "form-control", placeholder: t('placeholder.password')%>
+                             class: "form-control", placeholder: t('placeholder.password'), minlength: @minimum_password_length, require: true %>
       </div>
       <% if @minimum_password_length %>
-        <small class="form-text text-muted">(Не менее <%= @minimum_password_length %> символов)</small>
+        <small class="form-text text-muted"><%= I18n.t :password_count, count: @minimum_password_length %></small>
       <% end %>
     </div>
   </div>
@@ -51,7 +51,7 @@
           <span class="glyphicon glyphicon-lock"></span>
         </div>
         <%= f.password_field :password_confirmation, autocomplete: "new-password",
-                             class: "form-control", placeholder: t('placeholder.password_confirmation') %>
+                             class: "form-control", placeholder: t('placeholder.password_confirmation'), minlength: @minimum_password_length, require: true %>
       </div>
     </div>
   </div>
