@@ -9,12 +9,12 @@
       <div class="input-group-addon">
         <span class="glyphicon glyphicon-envelope"></span>
       </div>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Введите email",required: true %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: t('placeholder.email'),required: true %>
     </div>
   </div>
 
   <div class="actions">
-    <%= f.submit "Отправить инструкции для сброса пароля", class: "btn btn-primary" %>
+    <%= f.submit t('messages.info.password_recovery'), class: "btn btn-primary" %>
   </div>
 <% end %>
 

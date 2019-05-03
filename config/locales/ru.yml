@@ -50,6 +50,7 @@ ru:
       leave_password_blank: '(оставьте пустым, если не нужно менять)'
       current_password_required: '(необходим текущий пароль для изменений)'
       confirmation: 'Вы уверены?'
+      password_recovery: 'Отправить инструкции для сброса пароля'
   page:
     app_name: 'Шашлыки'
     company_name: 'Company VG 2019'

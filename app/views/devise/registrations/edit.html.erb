@@ -19,7 +19,7 @@
       <%= f.label :password %> <i><%= t('messages.info.leave_password_blank') %></i><br />
       <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
       <% if @minimum_password_length %>
-        <em>(не менее <%= @minimum_password_length %> символов)</em>
+        <em>(<%= I18n.t :password_count, count: @minimum_password_length %>)</em>
       <% end %>
     </div>
   </div>
