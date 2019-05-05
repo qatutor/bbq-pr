@@ -30,4 +30,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  actions:
+    register: 'Sign up'
+    enter: 'Login'
+    remember_me: 'Remember me'
+    delete: 'Delete'
+  placeholder:
+    email: 'Enter email'
+    password: 'Enter password'
+    password_confirmation: 'Confirm password'
+    name: 'Enter name'
+  password_count:
+    one: 'Mininum password length %{count} character'
+    other: 'Minimum password length %{count} characters'
+  page:
+    app_name: 'meetUpFriends'

@@ -36,6 +36,7 @@ ru:
     update: 'Обновить'
     logout: 'Выйти'
     profile: 'Профиль'
+    delete: 'Удалить'
   placeholder:
     email: 'Введите email'
     name: 'Введите имя'
