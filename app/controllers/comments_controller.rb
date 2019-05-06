@@ -18,11 +18,13 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
-    @comment.destroy
-    respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
-      format.json { head :no_content }
+    message = {notice: I18n.t('controllers.comments.destroyed')}
+    if current_user_can_edit?(@comment)
+      @comment.destroy!
+    else
+      message = {alert: I18n.t('controllers.comments.error')}
     end
+    redirect_to @event, message
   end
 
   private
