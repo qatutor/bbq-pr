@@ -3,8 +3,6 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show]
   before_action :set_current_user_event, only: [:edit, :update, :destroy]
 
-  has_many :subscribers, through: :subscriptions, source: :user
-
   # GET /events
   def index
     @events = Event.all
