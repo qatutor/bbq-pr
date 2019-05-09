@@ -3,14 +3,14 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show]
   before_action :set_current_user_event, only: [:edit, :update, :destroy]
 
+  has_many :subscribers, through: :subscriptions, source: :user
+
   # GET /events
-  # GET /events.json
   def index
     @events = Event.all
   end
 
   # GET /events/1
-  # GET /events/1.json
   def show
   end
 
@@ -24,7 +24,6 @@ class EventsController < ApplicationController
   end
 
   # POST /events
-  # POST /events.json
   def create
     @event = current_user.events.build(event_params)
 
@@ -40,7 +39,6 @@ class EventsController < ApplicationController
   end
 
   # PATCH/PUT /events/1
-  # PATCH/PUT /events/1.json
   def update
     respond_to do |format|
       if @event.update(event_params)
@@ -54,7 +52,6 @@ class EventsController < ApplicationController
   end
 
   # DELETE /events/1
-  # DELETE /events/1.json
   def destroy
     @event.destroy
     respond_to do |format|

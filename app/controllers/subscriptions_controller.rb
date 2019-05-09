@@ -3,29 +3,25 @@ class SubscriptionsController < ApplicationController
   before_action :set_subscription, only: [:destroy]
 
   # POST /subscriptions
-  # POST /subscriptions.json
   def create
-    @subscription = Subscription.new(subscription_params)
-
-    respond_to do |format|
-      if @subscription.save
-        format.html { redirect_to @subscription, notice: 'Subscription was successfully created.' }
-        format.json { render :show, status: :created, location: @subscription }
-      else
-        format.html { render :new }
-        format.json { render json: @subscription.errors, status: :unprocessable_entity }
-      end
+   @new_subscription = @event.subscriptions.build(subscription_params)
+   @new_subscription.user = current_user
+    if @new_subscription.save
+      redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
+    else
+      render 'events/show', alert: I18n.t('controllers.subscriptions.error')
     end
   end
 
   # DELETE /subscriptions/1
-  # DELETE /subscriptions/1.json
   def destroy
-    @subscription.destroy
-    respond_to do |format|
-      format.html { redirect_to subscriptions_url, notice: 'Subscription was successfully destroyed.' }
-      format.json { head :no_content }
+    message = { notice: I18n.t('controllers.subscriptions.destroyed') }
+    if current_user_can_edit?(@subscription)
+      @subscription.destroy
+    else
+      message = { alert: I18n.t('controllers.subscriptions.error')}
     end
+    redirect_to @event, message
   end
 
   private
