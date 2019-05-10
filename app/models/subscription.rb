@@ -1,7 +1,7 @@
 class Subscription < ApplicationRecord
   belongs_to :user
   belongs_to :event
-  has_many :subscribers, through: :subscriptions, source: :user
+  # has_many :subscribers, through: :subscriptions, source: :user
 
   validates :user_name, presence: true, unless: -> { user.present? }
   validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
